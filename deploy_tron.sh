@@ -92,6 +92,10 @@ elif [ $NET == "testnet" ]; then
   wget https://raw.githubusercontent.com/tronprotocol/TronDeployment/master/test_net_config.conf -O test_net_config.conf
   BRANCH="master"
   CONF_PATH=$BIN_PATH/test_net_config.conf
+elif [ $NET == "shasta" ]; then
+  wget https://raw.githubusercontent.com/tronprotocol/TronDeployment/master/test_net_config.conf -O shasta.conf
+  BRANCH="master"
+  CONF_PATH=$BIN_PATH/shasta.conf
 fi
 
 if [ -n $RPC_PORT ]; then
